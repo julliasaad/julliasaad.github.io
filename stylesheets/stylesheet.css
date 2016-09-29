@@ -611,6 +611,9 @@ form {
 
 
 /* GENERAL ELEMENT TYPE STYLES */
+#especificacoes {
+  color: #3366ff;
+}
 
 #main-content h1 {
   margin-top: 0;
