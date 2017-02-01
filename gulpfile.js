@@ -20,7 +20,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src(config.srcPath + 'sass/**/*.+(scss|sass)')
+    return gulp.src(config.srcPath + 'sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed'
@@ -32,16 +32,13 @@ gulp.task('sass', function() {
         }));
 });
 
-gulp.task('watch', ['browserSync'], function() {
-    gulp.watch(config.srcPath + 'sass/**/*.+(scss|sass)', ['sass']);
+gulp.task('pug', function buildHTML() {
+    return gulp.src('src/template/*.pug')
+        .pipe(pug({}))
+        .pipe(gulp.dest('./'));
 });
 
-gulp.task('views', function buildHTML() {
-    return gulp.src('src/template/*.pug')
-        .pipe(pug({
-            // Your options in here.
-        }))
-        .pipe(gulp.dest('./'));
-    // .pipe(pug()) // pip to jade plugin
-    //
+gulp.task('watch', ['browserSync'], function() {
+    gulp.watch(config.srcPath + 'sass/**/*.scss', ['sass']);
+    gulp.watch('**/*.pug', ['pug']);
 });

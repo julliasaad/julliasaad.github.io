@@ -1,0 +1,103 @@
+/*General*/
+section, header {
+  height: 100vh;
+}
+
+h2.center-align {
+  margin: 0;
+}
+
+h2 {
+  padding: 40px;
+}
+
+/*Variaveis*/
+
+/*Header*/
+header {
+
+}
+
+/*Section skills*/
+section#skills {
+  .card {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: none;
+  }
+  .card.one {
+    background-image: url("/../src/images/html-5.svg");
+  }
+  .card.two {
+    background-image: url("/../src/images/css-3.svg");
+  }
+  .card.three {
+    background-image: url("/../src/images/git-icon.svg");
+  }
+  .card.four {
+    background-image: url("/../src/images/sass.svg");
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*Ajustando os cards*/
+
+.card {
+  background-size: cover;
+}
+
+/*Footer*/
+footer#contact {
+
+}
+
+ footer {
+   height: 15vh;
+ }
+
+/*Flip transition*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back, .card {
+	width: 250px;
+	height: 250px;
+  margin: 10px 0 10px 0;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
