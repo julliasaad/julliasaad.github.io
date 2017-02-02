@@ -1,3 +1,13 @@
+/*Variaveis*/
+
+$html5: url("/../src/images/html-5.svg");
+$css3:  url("/../src/images/css-3.svg");
+$git: url("/../src/images/git-icon.svg");
+$sass: url("/../src/images/sass.svg");
+$ufo: url("/../src/images/ufo.png");
+$top-alien: url("/../src/images/alien.svg");
+$down-alien: url("/../src/images/alien-down.jpg");
+
 /*General*/
 section, header {
   height: 100vh;
@@ -11,11 +21,57 @@ h2 {
   padding: 40px;
 }
 
-/*Variaveis*/
 
 /*Header*/
 header {
 
+}
+
+/*Section sobre*/
+section#about {
+  .col {
+    height: 100vh;
+  }
+  .ufo {
+    position: relative;
+    left: 20%;
+    width: 100px;
+    height: 150px;
+    background: {
+      size: 100px 150px;
+      image: $ufo;
+    }
+  }
+
+  .photos {
+    position: relative;
+    right: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .down-photo {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: {
+      size: 400px 400px;
+      image: $down-alien;
+      repeat: no-repeat;
+    }
+  }
+
+  .top-photo {
+    transition: all 0.1s linear;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: {
+      size: 400px 400px;
+      image: $top-alien;
+      repeat: no-repeat;
+    }
+  }
 }
 
 /*Section skills*/
@@ -26,16 +82,16 @@ section#skills {
     box-shadow: none;
   }
   .card.one {
-    background-image: url("/../src/images/html-5.svg");
+    background-image: $html5;
   }
   .card.two {
-    background-image: url("/../src/images/css-3.svg");
+    background-image: $css3;
   }
   .card.three {
-    background-image: url("/../src/images/git-icon.svg");
+    background-image: $git;
   }
   .card.four {
-    background-image: url("/../src/images/sass.svg");
+    background-image: $sass;
   }
   .col {
     display: flex;
@@ -100,4 +156,11 @@ footer#contact {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+@media (max-width: 600px) {
+  .flip-container, .front, .back, .card {
+  	width: 150px;
+  	height: 150px;
+  }
 }
