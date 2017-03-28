@@ -1,14 +1,15 @@
-/*Variaveis*/
+/* variaveis */
 
 $html5: url("/../src/images/html-5.svg");
 $css3:  url("/../src/images/css-3.svg");
 $git: url("/../src/images/git-icon.svg");
 $sass: url("/../src/images/sass.svg");
+$xd: url("/../src/images/xd_logo.svg");
 $ufo: url("/../src/images/ufo.png");
 $top-alien: url("/../src/images/alien.svg");
 $down-alien: url("/../src/images/alien-down.jpg");
 
-/*General*/
+/* general */
 section, header {
   height: 100vh;
 }
@@ -22,59 +23,44 @@ h2 {
 }
 
 
-/*Header*/
-header {
+/* header */
 
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
-/*Section sobre*/
+#profilePicture {
+  margin: 2em;
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+}
+
+header .description {
+  text-align: center;
+}
+
+
+/* sobre */
 section#about {
   .col {
     height: 100vh;
   }
-  .ufo {
-    position: relative;
-    left: 20%;
-    width: 100px;
-    height: 150px;
-    background: {
-      size: 100px 150px;
-      image: $ufo;
-    }
-  }
 
-  .photos {
-    position: relative;
-    right: 20%;
+  .icons {
     display: flex;
-    justify-content: flex-end;
+    flex-flow: column;
+    font-size: 7em;
+    align-items: center;
+    justify-content: space-around;
   }
-
-  .down-photo {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    background: {
-      size: 400px 400px;
-      image: $down-alien;
-      repeat: no-repeat;
-    }
-  }
-
-  .top-photo {
-    transition: all 0.1s linear;
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    background: {
-      size: 400px 400px;
-      image: $top-alien;
-      repeat: no-repeat;
-    }
-  }
+  
 }
 
-/*Section skills*/
+/* skills */
 section#skills {
   .card {
     background-size: 100% 100%;
@@ -93,13 +79,16 @@ section#skills {
   .card.four {
     background-image: $sass;
   }
+  .card.five {
+    background-image: $xd;
+  }
   .col {
     display: flex;
     justify-content: center;
   }
 }
 
-/*Ajustando os cards*/
+/*cards*/
 
 .card {
   background-size: cover;

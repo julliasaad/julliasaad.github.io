@@ -11,18 +11,20 @@ html(lang="en")
   body
     header.light-blue.lighten-4
       div.row
-        div.col.s6
-          div#title
+        div.header-content.col.s12
+          img#profilePicture(src="src/images/me.jpg")
+          div.description
             h1 Jullia Saad
             p Web developer padawan
-            p 20 anos, acredito que o melhor verbo é #[span aprender].
-            p ADS - 4º semestre, Fatec Sorocaba.
-        div.col.s6
+            p 20 anos
+            p Acredito que o melhor verbo é #[span aprender].
 
     section#about
       div.row
-        div.col.l6.grey.lighten-1        
-
+        div.col.l6.grey.lighten-1.icons        
+          a.fa.fa-github-square(href="https://github.com/julliasaad/" target="_blank")
+          a.fa.fa-facebook-square(href="https://github.com/julliasaad/" target="_blank")
+          a.fa.fa-linkedin-square(href="https://github.com/julliasaad/" target="_blank")
         div.col.l6.grey.lighten-3
 
     section#skills.light-blue.lighten-4
@@ -64,6 +66,16 @@ html(lang="en")
                       div.card-content
                   div.back
                     div.card.four.transparent
+                      div.card-content
+          div.row
+            div.col.s12
+              div.flip-container
+                div.flipper
+                  div.front
+                    div.card.five.transparent
+                      div.card-content
+                  div.back
+                    div.card.five.transparent
                       div.card-content
     footer#contact.grey.lighten-3
       div.row
