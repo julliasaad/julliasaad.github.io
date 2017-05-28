@@ -1,15 +1,9 @@
 /* variaveis */
 
-$html5: url("/../src/images/html-5.svg");
-$css3:  url("/../src/images/css-3.svg");
-$git: url("/../src/images/git-icon.svg");
-$sass: url("/../src/images/sass.svg");
-$xd: url("/../src/images/xd_logo.svg");
-$ufo: url("/../src/images/ufo.png");
-$top-alien: url("/../src/images/alien.svg");
-$down-alien: url("/../src/images/alien-down.jpg");
-
 /* general */
+body {
+  background-color: #212121;
+}
 section, header {
   height: 100vh;
 }
@@ -22,8 +16,39 @@ h2 {
   padding: 40px;
 }
 
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* nav */
+
+nav ul a {
+  color: black;
+}
 /* header */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("../../src/images/background.jpg");
+  background-color: black;
+  filter: grayscale(80%);
+  color: white;
+  height: 80vh !important;
+  min-height: 90vh !important;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+  }
+}
 
 .header-content {
   display: flex;
@@ -45,6 +70,7 @@ header .description {
 
 
 /* sobre */
+
 section#about {
   .col {
     height: 100vh;
@@ -60,96 +86,52 @@ section#about {
   
 }
 
-/* skills */
-section#skills {
-  .card {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    box-shadow: none;
-  }
-  .card.one {
-    background-image: $html5;
-  }
-  .card.two {
-    background-image: $css3;
-  }
-  .card.three {
-    background-image: $git;
-  }
-  .card.four {
-    background-image: $sass;
-  }
-  .card.five {
-    background-image: $xd;
-  }
-  .col {
+/*portfolio*/
+
+#portfolio {
+  height: 200vh;
+  width: 100vw;
+
+  .case1, .case2 {
+    position: relative;
     display: flex;
     justify-content: center;
+    margin-top: 25px;
+    
+    div {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      background-color: #eeeeee;
+      width: 800px;
+      height: 630px;
+      top: 1em;
+      right:265px;
+    }
+
+    a {
+      z-index: 2;
+    }
   }
 }
 
-/*cards*/
-
-.card {
-  background-size: cover;
-}
-
-/*Footer*/
-footer#contact {
-
-}
-
+/*footer*/
  footer {
-   height: 15vh;
+   margin-top: 25px;
+   text-align: center;
+   height: 20vh;
+   
+   footer#contact .social-medias {
+      text-align: center;
+      font-size: 40px; 
+    }
+   footer#contact .social-medias a {
+      color: #212121;
+   }
  }
 
-/*Flip transition*/
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
 
-.flip-container, .front, .back, .card {
-	width: 250px;
-	height: 250px;
-  margin: 10px 0 10px 0;
-}
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position: relative;
-}
 
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
 
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
-
-@media (max-width: 600px) {
-  .flip-container, .front, .back, .card {
-  	width: 150px;
-  	height: 150px;
-  }
-}

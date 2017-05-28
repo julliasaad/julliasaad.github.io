@@ -9,80 +9,54 @@ html(lang="en")
     link(href="dist/css/main.css" rel="stylesheet")
 
   body
-    header.light-blue.lighten-4
+
+    div.navbar.navbar-fixed-top
+      nav.navbar-inner.header.grey.lighten-3
+        div.container
+          ul.nav.pull-right
+            li 
+              a.nav-link(href="#home") HOME
+            li 
+              a.nav-link(href="#portfolio") PORTFOLIO
+            li 
+              a.nav-link(href="#contact") CONTATO
+
+    header#home
       div.row
         div.header-content.col.s12
-          img#profilePicture(src="src/images/me.jpg")
           div.description
             h1 Jullia Saad
             p Web developer padawan
             p 20 anos
-            p Acredito que o melhor verbo é #[span aprender].
+            p Acredito que o melhor verbo é #[span aprender]
 
-    section#about
-      div.row
-        div.col.l6.grey.lighten-1.icons        
-          a.fa.fa-github-square(href="https://github.com/julliasaad/" target="_blank")
-          a.fa.fa-facebook-square(href="https://github.com/julliasaad/" target="_blank")
-          a.fa.fa-linkedin-square(href="https://github.com/julliasaad/" target="_blank")
-        div.col.l6.grey.lighten-3
+    //- section#about
+    //-   div.row
+    //-     div.col.l6.grey.lighten-1.icons        
+    //-       a.fa.fa-github-square(href="https://github.com/julliasaad/" target="_blank")
+    //-       a.fa.fa-facebook-square(href="https://github.com/julliasaad/" target="_blank")
+    //-       a.fa.fa-linkedin-square(href="https://github.com/julliasaad/" target="_blank")
+    //-     div.col.l6.grey.lighten-3
 
-    section#skills.light-blue.lighten-4
-      h2.center-align Skills
-        div
-          div.row
-            div.col.s6.m6.l3
-              div.flip-container
-                div.flipper
-                  div.front
-                    div.card.one.transparent
-                      div.card-content
-                  div.back
-                    div.card.one.transparent
-                      div.card-content
-            div.col.s6.m6.l3
-              div.flip-container
-                div.flipper
-                  div.front
-                    div.card.two.transparent
-                      div.card-content
-                  div.back
-                    div.card.two.transparent
-                      div.card-content
-            div.col.s6.m6.l3
-              div.flip-container
-                div.flipper
-                  div.front
-                    div.card.three.transparent
-                      div.card-content
-                  div.back
-                    div.card.three.red.transparent
-                      div.card-content
-            div.col.s6.m6.l3
-              div.flip-container
-                div.flipper
-                  div.front
-                    div.card.four.transparent
-                      div.card-content
-                  div.back
-                    div.card.four.transparent
-                      div.card-content
-          div.row
-            div.col.s12
-              div.flip-container
-                div.flipper
-                  div.front
-                    div.card.five.transparent
-                      div.card-content
-                  div.back
-                    div.card.five.transparent
-                      div.card-content
+    section#portfolio.grey.darken-4
+      div(class="case1" ontouchstart="this.classList.toggle('hover')")
+        div.grey.lighten-2
+        a(href="http://app.govarejo.com.br/")
+          img(src="src/images/case1.png")
+
+      div(class="case2" ontouchstart="this.classList.toggle('hover')")
+        div.grey.lighten-2
+        a(href="http://ranchodev.com.br/")
+          img(src="src/images/case2.png")
+
     footer#contact.grey.lighten-3
-      div.row
-        div.col.s3
-        div.col.s3
-        div.col.s3
-        div.col.s3
+      div.row.social-medias
+        div.col.s4
+          a.fa.fa-github-square(href="https://github.com/julliasaad/" target="_blank")
+        div.col.s4
+          a.fa.fa-facebook-square(href="https://github.com/julliasaad/" target="_blank")
+        div.col.s4
+          a.fa.fa-linkedin-square(href="https://github.com/julliasaad/" target="_blank")
       div.row
         div.col.s12
           p Site developed with ♥ by Jullia Saad
