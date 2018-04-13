@@ -1,32 +1,35 @@
 {
-  "name": "julliasaad",
+  "name": "new-portfolio",
+  "description": "My new portfolio site",
   "version": "1.0.0",
-  "description": "Site pessoal.",
-  "main": "gulpfile.js",
+  "author": "Jullia <julliasaad01@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/julliasaad/julliasaad.github.io.git"
-  },
-  "author": "Jullia Saad",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/julliasaad/julliasaad.github.io/issues"
-  },
-  "homepage": "https://github.com/julliasaad/julliasaad.github.io#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.6",
-    "gulp": "^3.9.1",
-    "gulp-install": "~1.1.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.0",
-    "jquery": "^3.1.1",
-    "pug": "^2.0.0-beta7"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "gulp-install": "~1.1.0"
+    "vue": "^2.5.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }
