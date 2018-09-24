@@ -1,10 +1,10 @@
 <template>
   <section class="about">
     <div class="about__image">
-      <img src="../assets/img/me.jpg">
+      <img src="../assets/img/jullia.jpg">
     </div>
     <div class="about__description">
-      Hi! I'm Jullia Saad. I'm a front-end developer, a passionate about User Experience & one of the organizers of Rails Girls Sorocaba. 
+      Hi! I'm Jullia Saad. I'm a front-end developer, a passionate about User Experience & one of the organizers of Rails Girls Sorocaba.
       I like building user-friendly interfaces. I like to share knowledge and I believe that with technology we can make a better world.
     </div>
   </section>
@@ -25,7 +25,7 @@ export default {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   flex-direction: column;
   &__image {
     margin-bottom: 2.5em;
@@ -34,7 +34,7 @@ export default {
       height: 100%;
       border-radius: 100%;
     }
-    @media (min-width: 992px) { 
+    @media (min-width: 992px) {
       height: 150px;
       margin-bottom: 2em;
     }
@@ -45,12 +45,12 @@ export default {
     line-height: 52px;
     text-align: center;
     font-weight: 300;
-    @media (min-width: 992px) { 
+    @media (min-width: 992px) {
       width: 45%;
       font-size: 18px;
       line-height: 30px;
     }
   }
-  
+
 }
 </style>
