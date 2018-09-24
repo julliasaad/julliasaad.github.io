@@ -1,26 +1,28 @@
 <template>
   <section class="my-work">
     <h2 class="my-work__title">What I do</h2>
+    <h3>Studying differents forms to create a digital interfaces based on user feedbacks and requirements. In order to create the best possible experience with a digital product.</h3>
     <ul class="my-work__items">
+
       <li class="my-work__item">
         <h3 class="my-work__item__title">UX</h3>
         <p class="my-work__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum efficitur velit, et efficitur neque sollicitudin in. Pellentesque iaculis est non nunc vestibulum, in rhoncus justo rhoncus. Suspendisse in placerat lectus. Fusce id felis sit amet erat egestas semper id at eros. Curabitur vitae erat mattis, feugiat leo imperdiet, dapibus est. Sed sed neque ut nisi bibendum mattis ac at arcu. In rutrum, libero sed porttitor bibendum, nisl ipsum vehicula risus, nec porta ipsum metus id ligula. 
+          Creating prototypes, wireframes, storyboards, user flows, and site maps to effectively communicate interaction and design ideas.
         </p>
       </li>
       <li class="my-work__item">
         <h3 class="my-work__item__title">UI</h3>
         <p class="my-work__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum efficitur velit, et efficitur neque sollicitudin in. Pellentesque iaculis est non nunc vestibulum, in rhoncus justo rhoncus. Suspendisse in placerat lectus. Fusce id felis sit amet erat egestas semper id at eros. Curabitur vitae erat mattis, feugiat leo imperdiet, dapibus est. Sed sed neque ut nisi bibendum mattis ac at arcu. In rutrum, libero sed porttitor bibendum, nisl ipsum vehicula risus, nec porta ipsum metus id ligula. 
+          Defining and implementing innovative solutions for the product direction, visuals and experience.
         </p>
       </li>
       <li class="my-work__item">
         <h3 class="my-work__item__title">Code</h3>
         <p class="my-work__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum efficitur velit, et efficitur neque sollicitudin in. Pellentesque iaculis est non nunc vestibulum, in rhoncus justo rhoncus. Suspendisse in placerat lectus. Fusce id felis sit amet erat egestas semper id at eros. Curabitur vitae erat mattis, feugiat leo imperdiet, dapibus est. Sed sed neque ut nisi bibendum mattis ac at arcu. In rutrum, libero sed porttitor bibendum, nisl ipsum vehicula risus, nec porta ipsum metus id ligula. 
+          Using HTML, CSS, and JavaScript to build everything a user sees and interacts with on a website.
         </p>
       </li>
-    </ul>    
+    </ul>
   </section>
 </template>
 
@@ -50,8 +52,8 @@ export default {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    @media (min-width: 992px) { 
+    align-items: flex-start;
+    @media (min-width: 992px) {
       flex-direction: row;
       justify-content: space-around;
     }
@@ -59,7 +61,7 @@ export default {
   &__item {
     width: 90%;
     font-weight: 300;
-    font-size: 30px; 
+    font-size: 30px;
     text-align: left;
     &__title {
       text-transform: uppercase;
@@ -71,7 +73,7 @@ export default {
       }
     }
     @media (min-width: 992px) {
-      font-size: 16px; 
+      font-size: 16px;
       width: 350px;
       text-align: center;
     }
